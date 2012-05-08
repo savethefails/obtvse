@@ -5,5 +5,5 @@ login:               <%= ENV["obtvse_login"] ? ENV["obtvse_login"] : "username" 
 password:            <%= ENV["obtvse_password"] ? ENV["obtvse_password"] : "password" %>
 name:                Brett Bergmann
 twitter:             brttb
-email:               me@brettbergmann.com
-google_analytics_id: YOUR_GA_ID
+email:               <%= ENV["obtvse_email"] ? ENV["obtvse_email"] : "me@me.com" %>
+google_analytics_id: <%= ENV["obtvse_analytics"] ? ENV["obtvse_analytics"] : "UA-XXX-XXXX" %>
