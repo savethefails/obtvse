@@ -12,11 +12,14 @@
 <body class="<%= controller_name %> <%= action_name %>">
   <% unless @no_header %>
   <header>
-    <h1><%= link_to CONFIG['title'], root_url %></h1>
+    <h1><%= link_to CONFIG['title'], 'http://twitter.com/' + CONFIG['twitter'] %></h1>
     <span><%= CONFIG['tagline'].html_safe %></span>
     <ul>
+      <li>
+        <%= link_to 'Home', root_url %>
+      </li>
       <% if CONFIG['twitter'] %>
-        <li><%= link_to '@' + CONFIG['twitter'], 'http://twitter.com/' + CONFIG['twitter'] %></li>
+        <li><%= link_to '@Twitter', 'http://twitter.com/' + CONFIG['twitter'] %></li>
       <% end %>
       <% if CONFIG['github'] %>
         <li><%= link_to 'github', 'https://github.com/' + CONFIG['github'] %></li>
