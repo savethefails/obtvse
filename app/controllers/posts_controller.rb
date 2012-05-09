@@ -66,7 +66,8 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to "/edit/#{@post.id}", :notice => "Post created successfully" }
+        format.js
+        format.html { redirect_to admin_path, :notice => "Post created successfully" }
         format.xml { render :xml => @post, :status => :created, location: @post }
       else
         format.html { render :action => 'new' }
@@ -80,7 +81,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.update_attributes(params[:post])
-        format.html { redirect_to "/edit/#{@post.id}", :notice => "Post updated successfully" }
+        format.html { redirect_to admin_path, :notice => "Post updated successfully" }
         format.xml { head :ok }
       else
         format.html { render :action => 'edit' }

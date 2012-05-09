@@ -1,0 +1,3 @@
+var post="<%= j render :partial => 'li', :object => @post %>";
+$('#drafts').find('ul').prepend(post);
+$('#new_post').find('input').val('');

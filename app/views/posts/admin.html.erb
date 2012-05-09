@@ -1,6 +1,6 @@
 <div id="drafts" class="col">
-  <h1>Drafts <%= link_to 'New Draft', '/new', :class => 'button' %></h1>
-  <%= form_for @post do |f| %>
+  <h1>Ideas <%= link_to 'New Idea', '/new', :class => 'button' %></h1>
+  <%= form_for @post, :remote => true do |f| %>
     <%= f.text_field :title, :placeholder => 'Start typing your title here...' %>
   <% end %>
   <ul>
