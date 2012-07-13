@@ -1,0 +1,6 @@
+(function($){
+	$(document).on('keydown.resetSaved',function(){
+		$(document).off('.resetSaved');
+		$('#save-button').attr("disabled",false).removeClass('saved').val("Save");
+	});
+})(jQuery)

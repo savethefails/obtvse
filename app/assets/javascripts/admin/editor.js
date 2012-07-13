@@ -44,7 +44,8 @@ $(function() {
       if (validateTitle()) {
         $form.attr('target', '_self');
         $form.attr('action', original_action);
-        $form.submit();
+        savePost();
+        e.preventDefault();
       } else {
         e.preventDefault();
       }

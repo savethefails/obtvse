@@ -81,6 +81,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.update_attributes(params[:post])
+        format.js
         format.html { redirect_to admin_path, :notice => "Post updated successfully" }
         format.xml { head :ok }
       else
