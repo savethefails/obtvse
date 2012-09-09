@@ -17,6 +17,9 @@ module ApplicationHelper
     match = match_youtube line
     return render(:partial => 'youtube', :locals => { :video => match[1] }) if match
 
+    match = match_iframe line
+    return match[0] if match
+
     line
   end
 
@@ -28,4 +31,12 @@ module ApplicationHelper
     line.match(/^http.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#\&\?]*).*/)
   end
 
+  def match_iframe(line)
+    line.match(/(<iframe.*iframe>)/)
+  end
+
+
+
 end
+
+
