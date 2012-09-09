@@ -7,3 +7,5 @@ name:                Brett Bergmann
 twitter:             brttb
 email:               <%= ENV["obtvse_email"] ? ENV["obtvse_email"] : "me@me.com" %>
 google_analytics_id: <%= ENV["obtvse_analytics"] ? ENV["obtvse_analytics"] : "UA-XXX-XXXX" %>
+github:              <%= ENV["obtvse_github"] ? ENV["obtvse_github"] : "" %>
+disqus_shortname:    <%= ENV.fetch("disqus_shortname") { "" } %>
