@@ -19,6 +19,7 @@
   padding: .5em;
   color: #666;
   background-color: #eaeaea;
+  display:none;
 }
 
 .gist .gist-file .gist-meta a {
